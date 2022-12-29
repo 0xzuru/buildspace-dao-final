@@ -16,18 +16,18 @@ const App = () => {
   const network = useNetwork();
   console.log('👋 Address:', address);
   // Initialize our Edition Drop contract
-  const editionDropAddress = 'INSERT_EDITION_DROP_ADDRESS';
+  const editionDropAddress = '0x78f6D6d5E31C888E64DfB4746c4B385897fE1634';
   const { contract: editionDrop } = useContract(
     editionDropAddress,
     'edition-drop',
   );
   // Initialize our token contract
   const { contract: token } = useContract(
-    'INSERT_TOKEN_ADDRESS',
+    '0x84376499faD17925993bb34E753975c93441C18a',
     'token',
   );
   const { contract: vote } = useContract(
-    'INSERT_VOTE_ADDRESS',
+    '0x254c475D9083CD32445538aA6e83F6BF31fAE4Bb',
     'vote',
   );
   // Hook to check if the user has our NFT
@@ -171,7 +171,7 @@ const App = () => {
   if (!address) {
     return (
       <div className="landing">
-        <h1>Welcome to NarutoDAO</h1>
+        <h1>Welcome to weebDAO</h1>
         <div className="btn-hero">
           <ConnectWallet />
         </div>
